@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router";
 import { HomePage } from "./Pages/HomePage";
 import LoginPage from "./Pages/Auth/Login";
 import SignUpPage from "./Pages/Auth/SignUp";
+import { UserDashboard } from "./Pages/UserDashboard";
+import { AdminDashboard } from "./Pages/AdminDashboard";
 
 function App() {
 
@@ -11,7 +13,9 @@ function App() {
       <Routes>
        <Route path="/" element={<HomePage />} />
        <Route path="/login" element={<LoginPage />} />
-       <Route path="/register" element={<SignUpPage />} />
+       <Route path="/user" element={<UserDashboard />} />
+       <Route path="/admin" element={<AdminDashboard />} />
+       {/* <Route path="/register" element={<SignUpPage />} /> */}
       </Routes>
     </BrowserRouter>
   );

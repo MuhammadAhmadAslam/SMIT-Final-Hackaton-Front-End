@@ -6,9 +6,7 @@ export default function SignUpPage() {
 
     const navigate = useNavigate()
 
-    
-
-    async function SignUpNewUser(prevState, formData) {
+    async function SignUpNewUser(formData) {
         const firstname = formData.get("firstname");
         const lastname = formData.get("lastname");
         const email = formData.get("email");
@@ -19,12 +17,12 @@ export default function SignUpPage() {
             return
         }
         let objToSend = {
-            "FIRST_NAME": firstname,
-            "LAST_NAME": lastname,
-            "USER_EMAIL": email,
-            "PASSWORD": password
+            "firstName": firstname,
+            "lastName": lastname,
+            "email": email,
+            "password": password,
         }
-        // let sendingDataToApi = await axios.post("http://34.121.168.224:7000/api/auth/sign-up", objToSend)
+        let sendingDataToApi = await axios.post(`${process.env.BASE_URL_API}api/auth/signup`, objToSend)
 
         if (sendingDataToApi?.data?.status === "00") {
             console.log(sendingDataToApi , "data in action state")
