@@ -1,17 +1,17 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router";
-import Home from "./HomePage/Home";
-import { getCurrentUser } from "./Constant/helperFunction";
-import Auth from "./Auth/Auth";
+import { HomePage } from "./Pages/HomePage";
+import LoginPage from "./Pages/Auth/login";
+import SignUpPage from "./Pages/Auth/SignUp";
 
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Auth />} />
-        {/* <Route path="/signup" element={<SignUp />} /> */}
+       <Route path="/" element={<HomePage />} />
+       <Route path="/login" element={<LoginPage />} />
+       <Route path="/register" element={<SignUpPage />} />
       </Routes>
     </BrowserRouter>
   );
