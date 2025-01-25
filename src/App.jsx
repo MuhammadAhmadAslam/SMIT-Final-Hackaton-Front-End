@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router";
 import { HomePage } from "./Pages/HomePage";
-import LoginPage from "./Pages/Auth/login";
+import LoginPage from "./Pages/Auth/Login";
 import SignUpPage from "./Pages/Auth/SignUp";
 
 function App() {
