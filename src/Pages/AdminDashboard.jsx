@@ -12,11 +12,11 @@ export default function AdminDashboard() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:4000/api/loan/getAllRequest")
+                const response = await fetch("https://smit-final-hackaton-backend-production-da72.up.railway.app/api/loan/getAllRequest")
                 if (!response.ok) {
                     throw new Error("Failed to fetch data")
                 }
-                let users = await fetch("http://localhost:4000/api/auth/allUsers")
+                let users = await fetch("https://smit-final-hackaton-backend-production-da72.up.railway.app/api/auth/allUsers")
                 users = await users.json()
                 console.log(users, "usrs");
 
@@ -28,9 +28,9 @@ export default function AdminDashboard() {
 
                 const analytics = {
                     totalRequests: requests.length,
-                    pendingRequests: requests.filter((r) => r.status === "pending").length,
-                    acceptedRequests: requests.filter((r) => r.status === "accepted").length,
-                    rejectedRequests: requests.filter((r) => r.status === "rejected").length,
+                    pendingRequests: requests.filter((r) => r.status === "Pending").length,
+                    acceptedRequests: requests.filter((r) => r.status === "Approved").length,
+                    rejectedRequests: requests.filter((r) => r.status === "Rejected").length,
                     totalUsers: users.length,
                 }
 

@@ -23,7 +23,7 @@ export default function LoanRequestsPageUser() {
                 console.log(decodedToken, "decode token");
 
 
-                const response = await fetch(`http://localhost:4000/api/loan/getuserRequest/${userId}`)
+                const response = await fetch(`https://smit-final-hackaton-backend-production-da72.up.railway.app/api/loan/getuserRequest/${userId}`)
                 if (!response.ok) {
                     throw new Error("Failed to fetch loan requests")
                 }

@@ -70,6 +70,21 @@ const navItems = [
         href: "/admin",
         icon: FaHome,
     },
+    {
+        title: "Loan Requests",
+        href: "/admin/userRequest",
+        icon: FaRegEnvelope,
+    },
+    {
+        title: "Categories",
+        href: "/admin/categories",
+        icon: FaBook,
+    },
+    {
+        title: "Users",
+        href: "/admin/users",
+        icon: FaUser,
+    }
 ];
 
 export default function AdminLayout({ children }) {

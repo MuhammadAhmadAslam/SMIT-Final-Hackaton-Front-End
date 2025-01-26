@@ -196,7 +196,7 @@ export default function LoginPage() {
 
     try {
       const loginingUser = await axios.post(
-        "http://localhost:4000/api/auth/login",
+        "https://smit-final-hackaton-backend-production-da72.up.railway.app/api/auth/login",
         objToSend
       );
 

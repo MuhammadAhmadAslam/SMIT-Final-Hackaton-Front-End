@@ -66,7 +66,7 @@ import { BiTask } from "react-icons/bi";
 
 const navItems = [
     {
-        title: "Apply For Loan",
+        title: "Your Loan Requests",
         href: "/applyFormPage",
         icon: FaHome,
     },

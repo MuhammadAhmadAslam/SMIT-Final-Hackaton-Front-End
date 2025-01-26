@@ -1,4 +1,3 @@
-"use client"
 
 import { useEffect, useState } from "react"
 import { jwtDecode } from "jwt-decode"
@@ -35,7 +34,7 @@ export default function UserDashboardUser() {
         const decodedToken = jwtDecode(token)
         const userId = decodedToken.id
 
-        const response = await fetch(`http://localhost:4000/api/loan/getuserRequest/${userId}`)
+        const response = await fetch(`https://smit-final-hackaton-backend-production-da72.up.railway.app/api/loan/getuserRequest/${userId}`)
         if (!response.ok) {
           throw new Error("Failed to fetch applications")
         }
@@ -117,7 +116,7 @@ function ApplicationCard({
             <strong>Status:</strong> {application.status}
           </div>
         </div>
-        {application.status === "Approved" && application.breakdown && (
+        {application.status === "Accepted" && application.breakdown && (
           <>
             <h3 className="text-xl font-semibold mb-2">Payment Breakdown</h3>
             <Table>
