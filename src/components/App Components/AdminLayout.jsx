@@ -68,12 +68,26 @@ const navItems = [
     {
         title: "Analytics",
         href: "/admin",
-        icon: FaHome, 
+        icon: FaHome,
     },
 ];
 
 export default function AdminLayout({ children }) {
+    const [open, setOpen] = React.useState(false);
+    const [showMobileMenu, setShowMobileMenu] = React.useState(false);
 
+    React.useEffect(() => {
+        const down = (e) => {
+            if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+                e.preventDefault();
+                setOpen((open) => !open);
+            }
+        };
+        document.addEventListener("keydown", down);
+        return () => document.removeEventListener("keydown", down);
+    }, []);
+
+    
     return (
         <>
             <div className="flex flex-row">

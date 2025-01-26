@@ -2,6 +2,7 @@ import {Link} from "react-router"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
+    
     return (
         <section className="bg-primary text-white py-20 min-h-[90vh] flex justify-center items-center">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,10 +13,10 @@ export function HeroSection() {
                         underprivileged.
                     </p>
                     <div className="space-x-4">
-                        <Link href="/apply">
-                            <Button size="lg" variant="secondary">
+                        <Link to="/user">
+                            {/* <Button size="lg" variant="secondary"> */}
                                 Apply for a Loan
-                            </Button>
+                            {/* </Button> */}
                         </Link>
                         {/* <Link href="/donate">
                             <Button size="lg" variant="outline">
