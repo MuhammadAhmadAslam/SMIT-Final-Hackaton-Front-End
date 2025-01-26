@@ -120,7 +120,7 @@ export function LoanApplicationForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-8 container mx-auto">
             {step === 1 && (
                 <Card>
                     <CardHeader>

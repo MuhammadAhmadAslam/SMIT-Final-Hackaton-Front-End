@@ -13,7 +13,7 @@ export function HeroSection() {
                         underprivileged.
                     </p>
                     <div className="space-x-4">
-                        <Link to="/user">
+                        <Link to="/applyFormPage">
                             {/* <Button size="lg" variant="secondary"> */}
                                 Apply for a Loan
                             {/* </Button> */}
