@@ -54,7 +54,7 @@ export default function ResetPasswordPage() {
       const email = decodedToken.email;
 
       const response = await fetch(
-        "http://localhost:4000/api/auth/resetPassword",
+        "https://smit-final-hackaton-backend-production-da72.up.railway.app/api/auth/resetPassword",
         {
           method: "POST",
           headers: {
