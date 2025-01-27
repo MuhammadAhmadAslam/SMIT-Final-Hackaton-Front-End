@@ -149,7 +149,7 @@ export function LoanApplicationForm() {
     if (validateForm()) {
       console.log("Form submitted:", formData);
       let sendingData = await axios.post(
-        "https://hackathon-backend-production-6a74.up.railway.app/api/loan/applyLoan",
+        "https://smit-final-hackaton-backend-production-da72.up.railway.app/api/loan/applyLoan",
         formData
       )
       console.log(sendingData, "sendingData");

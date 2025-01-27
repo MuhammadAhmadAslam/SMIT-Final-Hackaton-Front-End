@@ -10,6 +10,7 @@ import UserDashboardUser from "./Pages/UserDashboardUser";
 import AdminCategoriesPage from "./Pages/AdminCategories";
 import AdminUsersPage from "./Pages/AdminUsers";
 import AdminLoanRequestsPage from "./Pages/AdminRequest";
+import ResetPasswordPage from "./Pages/ResetPassword";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
        <Route path="/admin/userRequest" element={<AdminLoanRequestsPage />} />
        <Route path="/user/userRequest" element={<LoanRequestsPageUser />}/>
        <Route path="/user" element={<UserDashboardUser />}/>
+       <Route path="/resetPassword" element={<ResetPasswordPage />} />
        {/* <Route path="/register" element={<SignUpPage />} /> */}
       </Routes>
     </BrowserRouter>

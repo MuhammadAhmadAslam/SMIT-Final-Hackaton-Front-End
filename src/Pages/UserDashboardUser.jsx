@@ -14,6 +14,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
+import { useNavigate } from "react-router"
 
 
 export default function UserDashboardUser() {
@@ -22,6 +23,28 @@ export default function UserDashboardUser() {
   const [error, setError] = useState(null)
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 5
+let navigate = useNavigate();
+  useEffect(() => {
+    let currentUser = localStorage.getItem("auth-token")
+    if (!currentUser) {
+      navigate("/login")
+    }
+    const decodedToken = jwtDecode(currentUser)
+    console.log(decodedToken , "decode token");
+    
+    if (decodedToken.role == "admin") {
+      navigate("/admin")
+    }
+    if (decodedToken.role == "user") {
+      if(!decodedToken.isPasswordReset){
+        navigate("/resetPassword")
+      }
+    } else {
+      navigate("/login")
+    }
+  },[])
+
+
 
   useEffect(() => {
     const fetchApplications = async () => {

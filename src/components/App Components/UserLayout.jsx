@@ -71,6 +71,11 @@ const navItems = [
         icon: FaHome,
     },
     {
+        title: "Reset Password",
+        href: "/resetPassword",
+        icon: FaRegEnvelope,
+    },
+    {
         title: "Previous Loan Applications",
         href: "/admin/applications",
         icon: FaBookOpen,
